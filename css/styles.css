@@ -706,6 +706,7 @@ section.customers {
   min-height: 120px;
   padding: 8px 16px;
   margin-bottom: 16px;
+  resize: none;
 }
 
 .form .input.comment::placeholder {
