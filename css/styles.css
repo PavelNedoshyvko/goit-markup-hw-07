@@ -17,9 +17,16 @@
 
   /* Size */
 
-  --min-container-width: 320px;
-  --primary-container-width: 1158px;
-  --outer-container-width: 1440px;
+  /* 480px, 768px, 1200px. */
+
+  --min-width-mobile: 320px;
+  --primary-container-width-mobile: 428px;
+  --breakpoint-mobile: 480px;
+  --primary-container-width-tablet: 582px;
+  --breakpoint-tablet: 768px;
+  --primary-container-width-desktop: 1158px;
+  --outer-container-width-desktop: 1440px;
+  --breakpoint-desktop: 1200px;
 }
 
 body {
@@ -76,12 +83,33 @@ body {
 }
 
 .container {
-  min-width: var(--min-container-width);
-  max-width: var(--primary-container-width);
-  padding-left: 15px;
-  padding-right: 15px;
+  min-width: var(--min-width-mobile);
+  padding-left: 16px;
+  padding-right: 16px;
   margin-left: auto;
   margin-right: auto;
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    max-width: var(--primary-container-width-mobile);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: var(--primary-container-width-tablet);
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: var(--primary-container-width-desktop);
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 
 /**
@@ -197,7 +225,7 @@ body {
 /* SECTION Hero */
 
 .section.hero {
-  max-width: var(--outer-container-width);
+  max-width: var(--outer-container-width-desktop);
   min-height: 600px;
   margin-left: auto;
   margin-right: auto;
@@ -205,7 +233,7 @@ body {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/hero/hero.jpg);
+    url(../images/hero/hero-desktop.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -217,7 +245,7 @@ body {
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
   .section.hero {
-    background-image: url(../images/hero/hero@2x.jpg);
+    background-image: url(../images/hero/hero-desktop@2x.jpg);
   }
 }
 
