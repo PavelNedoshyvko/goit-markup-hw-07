@@ -398,11 +398,25 @@ body {
 }
 
 .features .item {
-  flex-basis: calc((100% - 24px * 3) / 4);
+  max-width: 396px;
 }
 
-.features .item:not(:last-child) {
-  margin-right: 24px;
+@media screen and (min-width: 768px) {
+  .features .item {
+    flex-basis: calc((100% - 24px) / 2);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .features .item {
+    flex-basis: calc((100% - 24px * 3) / 4);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .features .item:not(:last-child) {
+    margin-right: 24px;
+  }
 }
 
 .features .icon-box {
@@ -422,15 +436,37 @@ body {
 }
 
 .section .subtitle {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
   letter-spacing: 0.02em;
   color: var(--dark-navy-blue);
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .section .subtitle {
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .section .subtitle {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+  }
 }
 
 .section .text {
+  font-weight: 500;
   color: var(--text-slate);
+}
+
+@media screen and (min-width: 1200px) {
+  .section .text {
+    font-weight: 400;
+  }
 }
 
 .section .subtitle {
@@ -489,6 +525,9 @@ body {
 }
 
 .team .item-card {
+  max-width: 264px;
+  margin-left: auto;
+  margin-right: auto;
   background-color: var(--white-background);
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
@@ -567,6 +606,8 @@ section.customers {
 }
 
 .customers .item {
+  display: flex;
+  flex-wrap: wrap;
   flex-basis: calc((100% - 16px) / 2);
   height: 88px;
 }
@@ -605,6 +646,7 @@ section.customers {
 
 .customers .icon {
   fill: currentColor;
+  width: 110px;
 }
 
 /* Footer */
@@ -628,8 +670,16 @@ section.customers {
   }
 }
 
-.footer .logo-wrap {
-  margin-right: 120px;
+@media screen and (min-width: 1200px) {
+  .footer .logo-wrap {
+    margin-right: 24px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer .logo-wrap {
+    margin-right: 120px;
+  }
 }
 
 .footer {
