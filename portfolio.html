@@ -27,6 +27,16 @@
           <a class="link logo" href="./index.html"
             >Web<span class="logo-studio">Studio</span>
           </a>
+          <button
+            class="menu-toggle js-open-menu"
+            type="button"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <svg class="icon" width="32" height="22">
+              <use href="./images/icons.svg#icon-burger"></use>
+            </svg>
+          </button>
           <ul class="list">
             <li class="item">
               <a class="link page" href="./index.html">Studio</a>
@@ -383,5 +393,80 @@
         </form>
       </div>
     </footer>
+
+    <!-- Mobile Menu -->
+
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu" type="button">
+        <svg class="icon-btn" width="8" height="8">
+          <use href="./images/icons.svg#icon-close-black"></use>
+        </svg>
+      </button>
+      <nav class="nav">
+        <ul class="list mobile-menu">
+          <li class="item item-page">
+            <a class="link page" href="./index.html">Studio</a>
+          </li>
+          <li class="item item-page">
+            <a class="link page" href="./portfolio.html">Portfolio</a>
+          </li>
+          <li class="item item-page">
+            <a class="link page" href="">Contacts</a>
+          </li>
+        </ul>
+      </nav>
+      <address class="address">
+        <ul class="list">
+          <li class="item">
+            <a class="link e-mail" href="mailto:info@devstudio.com"
+              >info@devstudio.com
+            </a>
+          </li>
+          <li class="item">
+            <a class="link tel" href="tel:+110001111111"
+              >+11 (000) 111-11-11
+            </a>
+          </li>
+        </ul>
+      </address>
+      <ul class="list icon-box">
+        <li class="item">
+          <a class="link icon-wrap" href="">
+            <svg class="icon" width="16" height="16">
+              <use href="./images/icons.svg#icon-instagram"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="item">
+          <a class="link icon-wrap" href="">
+            <svg class="icon" width="16" height="16">
+              <use href="./images/icons.svg#icon-twitter"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="item">
+          <a class="link icon-wrap" href="">
+            <svg class="icon" width="16" height="16">
+              <use href="./images/icons.svg#icon-facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="item">
+          <a class="link icon-wrap" href="">
+            <svg class="icon" width="16" height="16">
+              <use href="./images/icons.svg#icon-linkedin"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./js/mobile-menu.js"></script>
   </body>
 </html>
