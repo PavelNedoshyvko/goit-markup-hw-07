@@ -1276,7 +1276,7 @@ body {
   color: var(--pressed-state-ocean);
 }
 
-.address .list {
+.menu-container .address .list {
   display: flex;
   flex-direction: column-reverse;
   gap: 40px;
@@ -1342,13 +1342,22 @@ body {
 
 .gallery .filter {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 24px;
   margin-bottom: 72px;
 }
 
-.gallery .item-btn:not(:last-child) {
-  margin-right: 24px;
+@media screen and (min-width: 768px) {
+  .gallery .filter {
+    justify-content: center;
+    flex-wrap: nowrap;
+  }
 }
+
+/* .gallery .item-btn:not(:last-child) {
+  margin-right: 24px;
+} */
 
 .gallery .btn {
   padding: 12px 24px;
