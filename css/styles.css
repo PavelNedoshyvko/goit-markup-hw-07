@@ -1013,7 +1013,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
-  width: 408px;
+  width: 392px;
   height: 576px;
   padding-top: 72px;
   padding-bottom: 24px;
@@ -1029,6 +1029,12 @@ body {
 
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(1.5);
+}
+
+@media screen and (min-width: 768px) {
+  .backdrop .modal {
+    width: 408px;
+  }
 }
 
 .modal .btn-close {
