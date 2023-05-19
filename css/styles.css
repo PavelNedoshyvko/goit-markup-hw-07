@@ -992,7 +992,7 @@ body {
 body.modal-open {
   height: 100vh;
   overflow-y: hidden;
-  padding-right: 15px;
+  padding-right: 17px;
 }
 
 .backdrop {
